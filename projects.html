@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects &amp; Work - Akhila Sunesh</title>
+  <meta name="description" content="Explore all technical projects, research MVPs, and open-source contributions by Akhila Sunesh.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- Minimal Preloader -->
+  <div id="preloader">
+    <div class="preloader-spinner-wrapper">
+      <div class="preloader-ring-outer"></div>
+      <div class="preloader-ring-inner"></div>
+      <span class="preloader-monogram">AS</span>
+    </div>
+    <div class="preloader-text">Loading Projects...</div>
+  </div>
+
+  <!-- Ambient Light Orbs -->
+  <div class="bg-ambient">
+    <div class="ambient-orb ambient-orb-1"></div>
+    <div class="ambient-orb ambient-orb-2"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        Akhila Sunesh <span class="logo-dot"></span>
+      </a>
+
+      <div class="nav-wrapper">
+        <nav class="nav">
+          <a href="index.html#home">Home</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#experience">Experience</a>
+          <a href="index.html#education">Education</a>
+          <a href="index.html#video-showcase">Video</a>
+          <a href="projects.html" class="active">All Projects</a>
+          <a href="index.html#achievements">Achievements</a>
+        </nav>
+      </div>
+
+      <div class="nav-actions">
+        <a href="index.html" class="btn-contact"><i class="fa-solid fa-arrow-left"></i> Back to Main</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Projects Page Hero -->
+    <section class="projects-header-hero">
+      <a href="index.html" class="back-link">
+        <i class="fa-solid fa-arrow-left-long"></i> Back to Portfolio
+      </a>
+      <h2>Project Showcase</h2>
+      <p class="section-subtitle">
+        Click any card to expand details, architectural specifications, and technologies.
+      </p>
+    </section>
+
+    <!-- Filter & Search Controls -->
+    <section style="padding-top: 0;">
+      <div class="filter-search-controls">
+        <div class="search-bar-wrap">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="projectSearchInput" class="search-input" placeholder="Search by name, skill, or keyword...">
+        </div>
+
+        <div class="filter-categories" id="filterBtnGroup">
+          <button class="filter-btn active" data-category="all">All Projects</button>
+          <button class="filter-btn" data-category="social">Social Impact</button>
+          <button class="filter-btn" data-category="safety">Road Safety &amp; CV</button>
+          <button class="filter-btn" data-category="sustainability">Sustainability</button>
+          <button class="filter-btn" data-category="security">AI / Security</button>
+          <button class="filter-btn" data-category="research">Research</button>
+        </div>
+      </div>
+
+      <!-- Expandable Projects Grid (6 Click-to-Open Cards) -->
+      <div class="projects-catalog-grid" id="allProjectsGrid">
+
+        <!-- Project 1: EcoLogical -->
+        <article class="expandable-project-card" data-category="social" data-title="EcoLogical Social Impact Carbon Footprint React Django" tabindex="0">
+          <div class="project-image-box">
+            <img src="docs/pexels-cottonbro-5206860.jpg" alt="EcoLogical" class="project-photo">
+            <div class="project-glass-overlay">
+              <div class="project-title-group">
+                <h3>EcoLogical</h3>
+                <span class="project-category-sub">Social Impact</span>
+              </div>
+              <button type="button" class="btn-preview-project" aria-label="Toggle details">
+                <span>View Details</span> <i class="fa-solid fa-chevron-down toggle-icon"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="project-expandable-drawer">
+            <div class="project-info-body">
+              <div class="about-label">About</div>
+              <div class="project-meta-chips">
+                <span class="meta-chip">College</span>
+                <span class="meta-chip">3 Months</span>
+                <span class="meta-chip">React and Django</span>
+              </div>
+              <p class="project-desc-text">
+                A collaborative mini-project that monitors daily household activities energy use, travel, and consumption to calculate and visualize a family's carbon footprint, then recommends actionable steps to reduce emissions.
+              </p>
+              <div class="project-card-footer-chevron">
+                <i class="fa-solid fa-chevron-up"></i>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Pretty Pink Tax -->
+        <article class="expandable-project-card" data-category="social" data-title="Pretty Pink Tax Chrome Extension JavaScript E-Commerce" tabindex="0">
+          <div class="project-image-box">
+            <img src="docs/pexels-cup-of-couple-6963622.jpg" alt="Pretty Pink Tax" class="project-photo">
+            <div class="project-glass-overlay">
+              <div class="project-title-group">
+                <h3>Pretty Pink Tax</h3>
+                <span class="project-category-sub">Social Impact</span>
+              </div>
+              <button type="button" class="btn-preview-project" aria-label="Toggle details">
+                <span>View Details</span> <i class="fa-solid fa-chevron-down toggle-icon"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="project-expandable-drawer">
+            <div class="project-info-body">
+              <div class="about-label">About</div>
+              <div class="project-meta-chips">
+                <span class="meta-chip">Personal</span>
+                <span class="meta-chip">24 Hours</span>
+                <span class="meta-chip">JavaScript</span>
+              </div>
+              <p class="project-desc-text">
+                A Chrome extension that detects pink-taxed products on e-commerce platforms and instantly suggests cheaper men's equivalents with one-click switching.
+              </p>
+              <div class="project-card-footer-chevron">
+                <i class="fa-solid fa-chevron-up"></i>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: RakshakCV -->
+        <article class="expandable-project-card" data-category="safety" data-title="RakshakCV Road Safety YOLOv8 PyTorch Helmet Detection Computer Vision" tabindex="0">
+          <div class="project-image-box">
+            <img src="docs/pexels-enginakyurt-33653731.jpg" alt="RakshakCV" class="project-photo">
+            <div class="project-glass-overlay">
+              <div class="project-title-group">
+                <h3>RakshakCV</h3>
+                <span class="project-category-sub">Road Safety</span>
+              </div>
+              <button type="button" class="btn-preview-project" aria-label="Toggle details">
+                <span>View Details</span> <i class="fa-solid fa-chevron-down toggle-icon"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="project-expandable-drawer">
+            <div class="project-info-body">
+              <div class="about-label">About</div>
+              <div class="project-meta-chips">
+                <span class="meta-chip">Police Officials</span>
+                <span class="meta-chip">4 Weeks</span>
+                <span class="meta-chip">YOLOv8, PyTorch</span>
+              </div>
+              <p class="project-desc-text">
+                A YOLOv8-powered helmet detection system with hard-negative mining to accurately distinguish helmets from religious and cultural headwear in real-time traffic footage.
+              </p>
+              <div class="project-card-footer-chevron">
+                <i class="fa-solid fa-chevron-up"></i>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: Ban Bottles Collect Coins -->
+        <article class="expandable-project-card" data-category="sustainability" data-title="Ban Bottles Collect Coins Sustainability Vending Machines Python SQL" tabindex="0">
+          <div class="project-image-box">
+            <img src="docs/pexels-mart-production-7089298.jpg" alt="Ban Bottles Collect Coins" class="project-photo">
+            <div class="project-glass-overlay">
+              <div class="project-title-group">
+                <h3>Ban Bottles Collect Coins</h3>
+                <span class="project-category-sub">Sustainability</span>
+              </div>
+              <button type="button" class="btn-preview-project" aria-label="Toggle details">
+                <span>View Details</span> <i class="fa-solid fa-chevron-down toggle-icon"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="project-expandable-drawer">
+            <div class="project-info-body">
+              <div class="about-label">About</div>
+              <div class="project-meta-chips">
+                <span class="meta-chip">Vending Machines</span>
+                <span class="meta-chip">4 Months</span>
+                <span class="meta-chip">Python/SQL</span>
+              </div>
+              <p class="project-desc-text">
+                A conceptual system design for a smart recycling vending machine that rewards users with monetary incentives for depositing plastic bottles.
+              </p>
+              <div class="project-card-footer-chevron">
+                <i class="fa-solid fa-chevron-up"></i>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5: Verity -->
+        <article class="expandable-project-card" data-category="security" data-title="Verity AI Security Gateway PII Malicious Prompts Python Discord" tabindex="0">
+          <div class="project-image-box">
+            <img src="docs/pexels-dan-nelson-1667453-3949101.jpg" alt="Verity" class="project-photo">
+            <div class="project-glass-overlay">
+              <div class="project-title-group">
+                <h3>Verity</h3>
+                <span class="project-category-sub">AI/Security</span>
+              </div>
+              <button type="button" class="btn-preview-project" aria-label="Toggle details">
+                <span>View Details</span> <i class="fa-solid fa-chevron-down toggle-icon"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="project-expandable-drawer">
+            <div class="project-info-body">
+              <div class="about-label">About</div>
+              <div class="project-meta-chips">
+                <span class="meta-chip">Authorities</span>
+                <span class="meta-chip">24 Hrs</span>
+                <span class="meta-chip">Python, Discord</span>
+              </div>
+              <p class="project-desc-text">
+                An AI security gateway that intercepts PII leakage and malicious prompts in real time before they reach LLM APIs.
+              </p>
+              <div class="project-card-footer-chevron">
+                <i class="fa-solid fa-chevron-up"></i>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6: Academic Assignment -->
+        <article class="expandable-project-card" data-category="research" data-title="Academic Assignment Research Medical Image Segmentation Denoising OpenCV" tabindex="0">
+          <div class="project-image-box">
+            <img src="docs/pexels-leeloothefirst-8970299.jpg" alt="Academic Assignment" class="project-photo">
+            <div class="project-glass-overlay">
+              <div class="project-title-group">
+                <h3>Academic Assignment</h3>
+                <span class="project-category-sub">Research</span>
+              </div>
+              <button type="button" class="btn-preview-project" aria-label="Toggle details">
+                <span>View Details</span> <i class="fa-solid fa-chevron-down toggle-icon"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="project-expandable-drawer">
+            <div class="project-info-body">
+              <div class="about-label">About</div>
+              <div class="project-meta-chips">
+                <span class="meta-chip">Academic / Research</span>
+                <span class="meta-chip">1 Month</span>
+                <span class="meta-chip">Python/OpenCV</span>
+              </div>
+              <p class="project-desc-text">
+                Graph-based segmentation and denoising of medical images using Minimal Spanning Trees and Kruskal's Algorithm. Each pixel treated as a graph node, merged by intensity similarity.
+              </p>
+              <div class="project-card-footer-chevron">
+                <i class="fa-solid fa-chevron-up"></i>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Akhila Sunesh &middot; Engineered with passion for AI &amp; Cybersecurity &middot; Built with modern web standards.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
