@@ -122,41 +122,43 @@ function initVideoPlaceholder() {
   const newTabBtn = document.getElementById("videoOpenNewTabBtn");
   if (!videoFrame) return;
 
-  let currentVideoUrl = "https://www.youtube.com";
+  // If the frame does not already have an active video embedded, allow prompt
+  if (!videoFrame.querySelector("video") && !videoFrame.querySelector("iframe")) {
+    let currentVideoUrl = "video.html";
+    videoFrame.addEventListener("click", () => {
+      const videoUrl = prompt(
+        "🎥 Insert Video Link:\nEnter a YouTube embed URL, Vimeo link, or MP4 file URL:\n\n(e.g., https://www.youtube.com/embed/dQw4w9WgXcQ)"
+      );
 
-  videoFrame.addEventListener("click", () => {
-    const videoUrl = prompt(
-      "🎥 Insert Video Link:\nEnter a YouTube embed URL, Vimeo link, or MP4 file URL:\n\n(e.g., https://www.youtube.com/embed/dQw4w9WgXcQ)"
-    );
+      if (videoUrl && videoUrl.trim() !== "") {
+        const trimmedUrl = videoUrl.trim();
+        currentVideoUrl = trimmedUrl;
 
-    if (videoUrl && videoUrl.trim() !== "") {
-      const trimmedUrl = videoUrl.trim();
-      currentVideoUrl = trimmedUrl;
+        if (newTabBtn) {
+          newTabBtn.href = currentVideoUrl;
+        }
 
-      if (newTabBtn) {
-        newTabBtn.href = currentVideoUrl;
+        if (trimmedUrl.includes("youtube.com") || trimmedUrl.includes("youtu.be") || trimmedUrl.includes("vimeo.com")) {
+          videoFrame.innerHTML = `
+            <iframe 
+              src="${trimmedUrl}" 
+              title="Video Demonstration" 
+              style="width: 100%; height: 100%; border: 0;" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen>
+            </iframe>
+          `;
+        } else {
+          videoFrame.innerHTML = `
+            <video controls autoplay style="width: 100%; height: 100%; object-fit: cover;">
+              <source src="${trimmedUrl}" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          `;
+        }
       }
-
-      if (trimmedUrl.includes("youtube.com") || trimmedUrl.includes("youtu.be") || trimmedUrl.includes("vimeo.com")) {
-        videoFrame.innerHTML = `
-          <iframe 
-            src="${trimmedUrl}" 
-            title="Video Demonstration" 
-            style="width: 100%; height: 100%; border: 0;" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen>
-          </iframe>
-        `;
-      } else {
-        videoFrame.innerHTML = `
-          <video controls autoplay style="width: 100%; height: 100%; object-fit: cover;">
-            <source src="${trimmedUrl}" type="video/mp4">
-            Your browser does not support HTML5 video.
-          </video>
-        `;
-      }
-    }
-  });
+    });
+  }
 }
 
 /* ============================================

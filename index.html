@@ -107,13 +107,20 @@
         </div>
       </div>
 
-      <!-- Hero Profile Image Frame -->
+      <!-- Hero Profile Image Frame (Click to open demo video in a new tab) -->
       <div class="hero-image-wrapper">
         <div class="profile-card-frame">
-          <div class="profile-photo-box">
-            <div class="placeholder-glow"></div>
-            <img src="docs/profile.png" alt="Akhila Sunesh" class="displayed-hero-img">
-          </div>
+          <a href="video.html" target="_blank" rel="noopener noreferrer" class="profile-photo-link"
+            title="Click to watch demo video">
+            <div class="profile-photo-box">
+              <div class="placeholder-glow"></div>
+              <img src="docs/profile.png" alt="Akhila Sunesh" class="displayed-hero-img">
+              <div class="profile-video-overlay">
+                <span class="profile-play-icon"><i class="fa-solid fa-play"></i></span>
+                <span class="profile-play-text">Watch Video Demo</span>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </section>
@@ -382,31 +389,24 @@
       </div>
 
       <div class="video-container-card">
-        <div class="video-placeholder-frame" id="videoPlaceholderFrame">
-          <div class="video-pattern-grid"></div>
-
-          <div class="video-play-btn" id="playBtnTrigger">
-            <i class="fa-solid fa-play"></i>
-          </div>
-          <div class="video-title">Project Video Demonstration</div>
-          <p class="video-caption">Click to embed a YouTube / Vimeo / MP4 link, or open full video demo directly in a
-            new tab</p>
-          <span class="video-duration-badge"><i class="fa-solid fa-film"></i> HD &middot; Interactive</span>
+        <div class="video-placeholder-frame has-video" id="videoPlaceholderFrame">
+          <video controls preload="metadata"
+            style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: inherit;">
+            <source src="docs/demo-video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
         </div>
 
         <div class="video-meta-bar">
           <div class="video-info-text">
-            <h4>Live Walkthrough Demonstration</h4>
-            <p>Showcasing Agentic AI workflows, ATS Scanner architecture, and cybersecurity research.</p>
+            <h4>Video</h4>
+            <p>Check out to know my goals and aspirations</p>
           </div>
           <div class="video-actions-group">
-            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" id="videoOpenNewTabBtn"
+            <a href="video.html" target="_blank" rel="noopener noreferrer" id="videoOpenNewTabBtn"
               class="btn-video-newtab">
               <i class="fa-solid fa-arrow-up-right-from-square"></i> Open in New Tab
             </a>
-            <div class="video-action-hint">
-              <i class="fa-solid fa-circle-info"></i> Click frame to set URL
-            </div>
           </div>
         </div>
       </div>

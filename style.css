@@ -598,6 +598,67 @@ section {
   transition: transform 0.5s ease;
 }
 
+.profile-photo-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.profile-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(9, 14, 23, 0.45);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  opacity: 0;
+  transition: all 0.35s ease;
+  border-radius: 22px 8px 22px 8px;
+}
+
+.profile-play-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary) 0%, #e0248a 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  padding-left: 3px;
+  box-shadow: 0 0 25px rgba(160, 0, 109, 0.7);
+  transform: scale(0.85);
+  transition: transform 0.35s ease;
+}
+
+.profile-play-text {
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: var(--font-heading);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.profile-photo-link:hover .profile-video-overlay,
+.profile-card-frame:hover .profile-video-overlay {
+  opacity: 1;
+}
+
+.profile-photo-link:hover .profile-play-icon,
+.profile-card-frame:hover .profile-play-icon {
+  transform: scale(1.05);
+}
+
 .profile-card-frame:hover .displayed-hero-img {
   transform: scale(1.03);
 }
@@ -925,6 +986,12 @@ section {
   padding: 2rem;
   cursor: pointer;
   overflow: hidden;
+}
+
+.video-placeholder-frame.has-video {
+  padding: 0;
+  cursor: default;
+  background: #000;
 }
 
 .video-pattern-grid {
